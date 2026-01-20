@@ -86,7 +86,10 @@ const ZondaExperience = ({ scrollYProgress, isContentReady }: ZondaExperiencePro
                 </div>
               </div>
 
-              <button className="pointer-events-auto px-8 py-3 border border-pagani-gold/50 font-orbitron text-xs tracking-[0.3em] uppercase text-pagani-gold hover:bg-pagani-gold hover:text-pagani-black transition-all duration-300 glow-gold-sm">
+              <button
+                onClick={() => document.getElementById('specs')?.scrollIntoView({ behavior: 'smooth' })}
+                className="pointer-events-auto px-8 py-3 border border-pagani-gold/50 font-orbitron text-xs tracking-[0.3em] uppercase text-pagani-gold hover:bg-pagani-gold hover:text-pagani-black transition-all duration-300 glow-gold-sm"
+              >
                 {carData.hero.cta}
               </button>
             </motion.div>

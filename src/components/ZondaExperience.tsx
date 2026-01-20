@@ -49,7 +49,7 @@ const ZondaExperience = ({ scrollYProgress, isContentReady }: ZondaExperiencePro
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.7 }}
-              className="text-5xl md:text-7xl lg:text-9xl font-black tracking-[0.25em] mb-2"
+              className="text-3xl sm:text-5xl md:text-7xl lg:text-9xl font-black tracking-[0.25em] mb-2"
               style={{ fontFamily: "'Orbitron', sans-serif" }}
             >
               <span className="text-pagani-gold text-modern-border">
@@ -61,7 +61,7 @@ const ZondaExperience = ({ scrollYProgress, isContentReady }: ZondaExperiencePro
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.9 }}
-              className="font-orbitron text-4xl md:text-5xl lg:text-6xl font-light tracking-[0.3em] text-foreground mb-8"
+              className="font-orbitron text-xl sm:text-4xl md:text-5xl lg:text-6xl font-light tracking-[0.3em] text-foreground mb-8"
             >
               <span className="text-bright-border drop-shadow-[0_4px_12px_rgba(0,0,0,0.95),0_0_20px_rgba(255,255,255,0.1)]">
                 {carData.hero.subtitle}

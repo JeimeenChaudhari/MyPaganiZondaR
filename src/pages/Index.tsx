@@ -51,7 +51,7 @@ const Index = () => {
         className="h-[600vh] relative"
         style={{ position: 'relative' }}
       >
-        <div className="sticky top-0 h-screen w-full overflow-hidden">
+        <div className="sticky top-0 h-screen sm:h-[100dvh] w-full overflow-hidden">
           <ZondaScrollCanvas
             scrollYProgress={smoothProgress}
             totalFrames={240}

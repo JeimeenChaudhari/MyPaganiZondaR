@@ -101,14 +101,14 @@ const AutoScrollButton: React.FC = () => {
     if (!isVisible) return null;
 
     return (
-        <div className="fixed right-6 top-32 z-50 flex items-center gap-2">
+        <div className="fixed right-4 md:right-6 top-[140px] md:top-32 z-50 flex items-center gap-2">
             <AnimatePresence>
                 {showTooltip && (
                     <motion.div
                         initial={{ opacity: 0, x: 20 }}
                         animate={{ opacity: 1, x: 0 }}
                         exit={{ opacity: 0, x: 20 }}
-                        className="bg-black/80 text-pagani-gold border border-pagani-gold/30 px-3 py-2 rounded-md text-sm font-rajdhani backdrop-blur-sm shadow-lg max-w-[200px] text-right"
+                        className="bg-black/80 text-pagani-gold border border-pagani-gold/30 px-3 py-2 rounded-md text-xs md:text-sm font-rajdhani backdrop-blur-sm shadow-lg max-w-[150px] md:max-w-[200px] text-right"
                     >
                         Click here and use this feature for better experience
                     </motion.div>
@@ -128,13 +128,13 @@ const AutoScrollButton: React.FC = () => {
                     repeat: Infinity,
                     ease: "easeInOut"
                 }}
-                className={`bg-black/60 backdrop-blur-md p-3 rounded-full border border-pagani-gold/50 text-pagani-gold hover:bg-pagani-gold/20 hover:border-pagani-gold transition-colors shadow-[0_0_15px_rgba(212,175,55,0.2)] group`}
+                className={`bg-black/60 backdrop-blur-md p-2 md:p-3 rounded-full border border-pagani-gold/50 text-pagani-gold hover:bg-pagani-gold/20 hover:border-pagani-gold transition-colors shadow-[0_0_15px_rgba(212,175,55,0.2)] group`}
                 aria-label="Auto Scroll"
             >
                 {isScrolling ? (
-                    <Pause className="w-6 h-6" />
+                    <Pause className="w-5 h-5 md:w-6 md:h-6" />
                 ) : (
-                    <ChevronDown className="w-6 h-6 animate-bounce" />
+                    <ChevronDown className="w-5 h-5 md:w-6 md:h-6 animate-bounce" />
                 )}
             </motion.button>
         </div>

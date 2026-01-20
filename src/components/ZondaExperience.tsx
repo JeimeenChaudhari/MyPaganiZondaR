@@ -165,7 +165,7 @@ const ZondaExperience = ({ scrollYProgress, isContentReady }: ZondaExperiencePro
       {/* Engine Phase */}
       <motion.div
         style={{ opacity: engineOpacity, y: engineY }}
-        className="absolute inset-0 flex items-center justify-end px-6 md:px-12 lg:px-24"
+        className="absolute inset-0 flex items-center justify-end px-2 md:px-6 lg:px-12"
       >
         <div className="max-w-xl text-right">
           <div className="mb-6 flex justify-end">

@@ -7,12 +7,12 @@ const AerodynamicsSection = () => {
     <section id="aerodynamics" className="py-24 md:py-32 px-6 relative overflow-hidden">
       {/* Background Image with Gradient Overlay */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-fixed"
         style={{
           backgroundImage: `
-            linear-gradient(135deg, rgba(0, 0, 0, 0.92) 0%, rgba(0, 0, 0, 0.85) 50%, rgba(0, 0, 0, 0.92) 100%),
+            linear-gradient(135deg, rgba(0, 0, 0, 0.70) 0%, rgba(0, 0, 0, 0.60) 50%, rgba(0, 0, 0, 0.70) 100%),
             linear-gradient(to right, rgba(212, 175, 55, 0.08) 0%, transparent 50%, rgba(212, 175, 55, 0.08) 100%),
-            url('data:image/svg+xml,<svg width="1920" height="1080" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:%23111;stop-opacity:1"/><stop offset="50%" style="stop-color:%23222;stop-opacity:1"/><stop offset="100%" style="stop-color:%23111;stop-opacity:1"/></linearGradient></defs><rect fill="url(%23g1)" width="1920" height="1080"/><path d="M0,300 Q480,250 960,300 T1920,300" stroke="%23d4af37" stroke-width="2" fill="none" opacity="0.3"/><path d="M0,500 Q480,450 960,500 T1920,500" stroke="%23d4af37" stroke-width="2" fill="none" opacity="0.2"/><path d="M0,700 Q480,650 960,700 T1920,700" stroke="%23d4af37" stroke-width="2" fill="none" opacity="0.15"/></svg>')
+            url('/aero-side-profile.jpg.jpeg')
           `,
         }}
       />

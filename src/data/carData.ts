@@ -3,68 +3,71 @@ export const carData = {
   tagline: "Track-Only Hypercar",
   price: "€1,500,000",
   year: "2009",
-  
+
   hero: {
     title: "PAGANI",
     subtitle: "ZONDA R",
-    description: "The Ultimate Track Weapon",
-    cta: "INQUIRE NOW",
+    description: "Not just \"a\" supercar, it's \"the\" supercar",
+    cta: "DISCOVER MORE",
   },
-  
+
   design: {
     title: "DESIGN",
-    subtitle: "Carbon Fiber Monocoque",
-    description: "Every curve sculpted for aerodynamic perfection. The Zonda R's body is a masterpiece of carbon fiber engineering, weighing just 1,070 kg while providing unprecedented downforce and structural rigidity.",
+    subtitle: "New Heart, New Guise",
+    description: "Flying on the wings of a wind that keeps blowing harder and faster, the Zonda R was designed for the racetrack, and from the racetrack, without limits. This fabulous supercar is ready to display its character in total purity and freedom. The central monocoque in carbon-titanium, more rigid and lighter than ever, represents the outcome of the maximum expression of aesthetic, aerodynamic and ergonomic research carried out at Pagani's atelier.",
     features: [
-      { label: "Body", value: "Full Carbon Fiber" },
-      { label: "Weight", value: "1,070 kg" },
-      { label: "Downforce", value: "1,500 kg @ 350 km/h" },
+      { label: "Monocoque", value: "Carbon-Titanium" },
+      { label: "Dry Weight", value: "1,070 kg" },
+      { label: "Downforce", value: "Up to 1,500 kg" },
     ],
   },
-  
+
   engine: {
     title: "ENGINE",
-    subtitle: "Mercedes-AMG V12",
-    description: "At the heart of the Zonda R beats a naturally aspirated 6.0L V12 engine developed by Mercedes-AMG, producing an earth-shattering 750 horsepower.",
+    subtitle: "Mercedes-Benz AMG V12",
+    description: "The central monocoque in carbon-titanium encases a Mercedes-Benz AMG V12 high-performance racing engine as if it were a precious gem. This four wheel prodigy is able to deliver 750 HP and produce a torque of 710 Nm. The engine is bolted directly to the central monocoque, with direct throttle actuation via mechanical cable ensuring immediate throttle response.",
     specs: [
-      { label: "Engine", value: "6.0L V12" },
+      { label: "Engine", value: "M120 V12 60°" },
       { label: "Power", value: "750 HP" },
-      { label: "Torque", value: "710 Nm" },
-      { label: "0-100 km/h", value: "2.7s" },
-      { label: "Top Speed", value: "350 km/h" },
+      { label: "Torque", value: "710 Nm @ 5,700 RPM" },
+      { label: "0-100 km/h", value: "< 2.7s" },
+      { label: "Top Speed", value: "> 350 km/h" },
       { label: "Transmission", value: "6-Speed Sequential" },
     ],
   },
-  
+
   specs: [
-    { icon: "engine", label: "Engine", value: "6.0L V12", description: "Mercedes-AMG" },
-    { icon: "power", label: "Power", value: "750 HP", description: "@ 8,500 RPM" },
-    { icon: "torque", label: "Torque", value: "710 Nm", description: "@ 5,800 RPM" },
-    { icon: "speed", label: "Top Speed", value: "350 km/h", description: "Limited" },
-    { icon: "acceleration", label: "0-100", value: "2.7s", description: "Launch Control" },
+    { icon: "engine", label: "Engine", value: "M120 V12", description: "Mercedes-Benz AMG" },
+    { icon: "power", label: "Power", value: "750 HP", description: "Racing Engine" },
+    { icon: "torque", label: "Torque", value: "710 Nm", description: "@ 5,700 RPM" },
+    { icon: "speed", label: "Top Speed", value: "> 350 km/h", description: "Track Optimized" },
+    { icon: "acceleration", label: "0-100", value: "< 2.7s", description: "701 HP/ton" },
     { icon: "weight", label: "Weight", value: "1,070 kg", description: "Dry Weight" },
   ],
-  
+
   features: [
     {
-      title: "Aerodynamics",
-      description: "Advanced active aerodynamics with adjustable rear wing generating up to 1,500 kg of downforce at maximum speed.",
+      title: "Intuitive & Configurable",
+      description: "High performance combines with driving simplicity and manoeuvrability, thanks to a 12-stage Bosch Motorsport traction control and ABS system which allows the driver to fully adjust the settings while driving.",
+      image: "/interior-cockpit.jpg"
     },
     {
-      title: "Carbon Brakes",
-      description: "Brembo carbon-ceramic brake system with 6-piston front and 4-piston rear calipers for incredible stopping power.",
+      title: "Brembo Carbon Ceramic Brakes",
+      description: "4 ventilated Brembo carbon ceramic discs with 380x34mm front 6-piston calipers and 380x34mm rear 4-piston calipers ensure the car comes to a standstill even quicker than it accelerates.",
+      image: "/engineering-chassis.jpg.jpeg"
     },
     {
-      title: "Racing Cockpit",
-      description: "Purpose-built racing interior with exposed carbon fiber, racing harness, and digital dashboard.",
+      title: "XTRAC Sequential Gearbox",
+      description: "20 milliseconds is the time needed by the Zonda R to perform gearshifts, thanks to a transversal sequential gearbox in magnesium, enhanced by Xtrac transmission technology and Automac Engineering automation.",
+      image: "/powerplant-exhaust.jpg.jpeg"
     },
   ],
 
   // Extended History Section
   history: {
     title: "THE LEGEND",
-    subtitle: "A Legacy Born From Passion",
-    intro: "The Pagani Zonda R represents the pinnacle of Horacio Pagani's vision—a track-only hypercar that pushes the boundaries of automotive engineering to their absolute limits.",
+    subtitle: "Designed for the Racetrack, Without Limits",
+    intro: "Inspired by the F version, this extreme supercar that features a longer wheelbase was created specifically to meet a client's request. It embodies dedicated engineering know-how that represents the outcome of the maximum expression of aesthetic, aerodynamic and ergonomic research carried out at Pagani's atelier.",
     timeline: [
       {
         year: "1992",
@@ -102,25 +105,25 @@ export const carData = {
   // Detailed Engineering Section
   engineering: {
     title: "ENGINEERING",
-    subtitle: "Art Meets Science",
-    description: "Every component of the Zonda R is engineered to perfection, representing thousands of hours of development and testing.",
+    subtitle: "Dedicated Engineering Know-How",
+    description: "The Modenese atelier – on a par with the greatest fashion designers – is capable of strengthening its uniqueness without sacrificing driver comfort. Every component represents the maximum expression of engineering excellence.",
     sections: [
       {
         title: "Carbon-Titanium Monocoque",
-        description: "The central monocoque structure is crafted from a unique blend of carbon fiber and titanium, providing exceptional torsional rigidity while maintaining minimal weight. This advanced composite construction took over 4,000 hours to develop and perfect.",
+        description: "The central monocoque in carbon-titanium is more rigid and lighter than ever, with the engine bolted directly to it as a stressed member. Front and rear Cr-Mo space frames complement the bodywork in carbon fiber MD System.",
         stats: [
-          { label: "Torsional Rigidity", value: "35,000 Nm/deg" },
-          { label: "Weight", value: "70 kg" },
-          { label: "Development Hours", value: "4,000+" }
+          { label: "Material", value: "Carbon-Titanium" },
+          { label: "Dry Weight", value: "1,070 kg" },
+          { label: "Configuration", value: "Stressed Member" }
         ]
       },
       {
         title: "Suspension System",
-        description: "Double wishbone suspension front and rear, with pushrod-activated dampers and adjustable anti-roll bars. The system is derived directly from Formula 1 technology, offering precise handling characteristics.",
+        description: "4 independent wheels with double A-arm configuration. Forged Avional suspension arms with pull rod helical springs and Öhlins adjustable shock absorbers. Fully adjustable suspension setup available at the pits.",
         stats: [
-          { label: "Type", value: "Double Wishbone" },
-          { label: "Springs", value: "Titanium Coils" },
-          { label: "Dampers", value: "4-Way Adjustable" }
+          { label: "Type", value: "Double A-Arm" },
+          { label: "Arms", value: "Forged Avional" },
+          { label: "Dampers", value: "Öhlins Adjustable" }
         ]
       },
       {
@@ -134,11 +137,11 @@ export const carData = {
       },
       {
         title: "Transmission",
-        description: "The 6-speed sequential gearbox features magnesium casing and can execute gear changes in under 100 milliseconds. Paddle shifters mounted on the steering column provide intuitive control.",
+        description: "XTRAC 672 bespoke magnesium casing gearbox with 6-speed sequential dog gearchange. Enhanced by Xtrac transmission technology and Automac Engineering AMT system. Shift paddles located behind the steering wheel.",
         stats: [
-          { label: "Type", value: "Sequential" },
-          { label: "Gears", value: "6-Speed" },
-          { label: "Shift Time", value: "< 100ms" }
+          { label: "Type", value: "XTRAC 672" },
+          { label: "Gears", value: "6-Speed Sequential" },
+          { label: "Shift Time", value: "20 milliseconds" }
         ]
       }
     ]
@@ -147,8 +150,8 @@ export const carData = {
   // Aerodynamics Deep Dive
   aerodynamics: {
     title: "AERODYNAMICS",
-    subtitle: "Sculpted by Wind",
-    description: "The Zonda R's bodywork is the result of extensive wind tunnel testing and CFD analysis, creating a machine that cuts through air with surgical precision while generating massive downforce.",
+    subtitle: "Maximum Expression of Research",
+    description: "Aerodynamic setups allow for a high downforce setting of up to 1,500kg and a >350km/h top speed setting. The effectiveness of the rear is matched by the complex new front bonnet, as well as the closed flat underbody and rear diffusor.",
     features: [
       {
         title: "Front Splitter",
@@ -178,32 +181,32 @@ export const carData = {
   // Engine Details
   powerplant: {
     title: "POWERPLANT",
-    subtitle: "Heart of a Champion",
-    description: "The Mercedes-AMG M120 V12 engine has been specially developed and tuned for track use, producing 750 HP without any form of forced induction—pure naturally aspirated fury.",
+    subtitle: "A Precious Gem",
+    description: "Mercedes-Benz AMG M120 12 cylinder V 60°, 48 valves high-performance racing engine. This four wheel prodigy is able to deliver 750 HP and produce a torque of 710 Nm. Direct throttle actuation via mechanical cable ensures immediate throttle response, achieving improved propulsor performance in terms of reactivity.",
     specifications: [
       { label: "Configuration", value: "V12 60°" },
-      { label: "Displacement", value: "5,987 cc" },
-      { label: "Bore x Stroke", value: "89mm x 80.2mm" },
-      { label: "Compression Ratio", value: "11.8:1" },
-      { label: "Max Power", value: "750 HP @ 8,500 RPM" },
-      { label: "Max Torque", value: "710 Nm @ 5,800 RPM" },
-      { label: "Redline", value: "9,000 RPM" },
-      { label: "Valvetrain", value: "DOHC, 48 Valves" },
-      { label: "Fuel System", value: "Sequential Multi-Point Injection" },
-      { label: "Exhaust", value: "Inconel Titanium System" }
+      { label: "Displacement", value: "5,987 ccm" },
+      { label: "Bore x Stroke", value: "89.00mm x 80.20mm" },
+      { label: "Valvetrain", value: "48 Valves" },
+      { label: "Max Power", value: "750 HP" },
+      { label: "Max Torque", value: "710 Nm @ 5,700 RPM" },
+      { label: "Lubrication", value: "Dry Sump" },
+      { label: "Intake", value: "Single Throttle Bodies" },
+      { label: "Throttle Actuation", value: "Mechanically Operated" },
+      { label: "Exhaust", value: "Hydroformed Inconel" }
     ],
     features: [
       {
-        title: "Titanium Exhaust",
-        description: "The Inconel and titanium exhaust system weighs just 5 kg and produces the iconic Zonda howl that can reach 130 dB."
+        title: "Hydroformed Inconel Exhaust",
+        description: "Ceramic coated hydroformed Inconel exhaust system delivers the unmistakable Zonda symphony while optimizing performance."
       },
       {
-        title: "Dry Sump Lubrication",
-        description: "Racing-derived dry sump oil system ensures consistent lubrication during high-G cornering maneuvers."
+        title: "Dry Sump System",
+        description: "Advanced dry sump lubrication ensures consistent oil supply during extreme track conditions and high-G cornering."
       },
       {
-        title: "Carbon Intake",
-        description: "Carbon fiber intake manifolds optimize airflow while reducing weight in the engine bay."
+        title: "Mechanical Throttle",
+        description: "Single throttle bodies with mechanical cable actuation provide immediate response and improved propulsor performance in terms of reactivity."
       }
     ]
   },
@@ -240,24 +243,24 @@ export const carData = {
   // Interior Details
   interior: {
     title: "COCKPIT",
-    subtitle: "Racing Command Center",
-    description: "The Zonda R's interior strips away all luxury pretense in favor of pure functionality. Every control is positioned for maximum driver engagement.",
+    subtitle: "Attention to Detail and Safety",
+    description: "Although the overall conformation is kept to a bare minimum, the high quality finish and attention to detail do not fail to comply with the usual demanding Pagani Standards. The Modenese atelier is capable of strengthening its uniqueness without sacrificing driver comfort.",
     features: [
       {
-        title: "Racing Seat",
-        description: "Fixed-back carbon fiber racing seat with 6-point harness mounting points. Weighs just 4.5 kg while providing exceptional lateral support."
+        title: "Bespoke Toora Seats",
+        description: "FIA approved and compliant with the latest HANS standards, the bespoke Toora seats provide optimum driver safety and support."
       },
       {
-        title: "Digital Display",
-        description: "Central digital display shows real-time telemetry including lap times, sector splits, and performance data."
+        title: "Safety Systems",
+        description: "Five-point safety belts and roll-cage in Cr-Mo steel guarantee optimum driver safety in accordance with FIA regulations."
       },
       {
-        title: "Steering Wheel",
-        description: "Removable racing steering wheel with integrated paddle shifters and quick-release mechanism for easy driver egress."
+        title: "Carbon Fiber Construction",
+        description: "HANS compatible carbon fiber seats combine minimal weight with maximum safety and lateral support during high-speed cornering."
       },
       {
-        title: "Fire Suppression",
-        description: "FIA-approved fire suppression system with dual nozzle deployment for driver safety."
+        title: "Pagani Standards",
+        description: "High quality finish and attention to detail comply with the usual demanding Pagani Standards, even in this track-focused configuration."
       }
     ],
     materials: [
@@ -271,20 +274,20 @@ export const carData = {
   // Production Details
   production: {
     title: "EXCLUSIVITY",
-    subtitle: "Only 15 Built",
-    description: "The Zonda R represents the ultimate expression of exclusivity. With only 15 examples ever produced, each car was hand-built to the owner's exact specifications.",
+    subtitle: "Produced in a Limited Run of 15 Units",
+    description: "This fabulous supercar is ready to display its character in total purity and freedom. Each of the 15 examples represents the outcome of the maximum expression of aesthetic, aerodynamic and ergonomic research carried out at Pagani's atelier in Modena.",
     details: [
       {
-        title: "Hand-Built Craftsmanship",
-        description: "Each Zonda R required approximately 6,000 man-hours to complete, with master craftsmen hand-laying carbon fiber and assembling each component."
+        title: "Atelier Craftsmanship",
+        description: "Created at Pagani's atelier in San Cesario sul Panaro, Modena, each Zonda R embodies the dedicated engineering know-how and artisanal excellence that defines Pagani Automobili."
       },
       {
-        title: "Bespoke Configuration",
-        description: "Owners work directly with Pagani's design team to specify every detail, from carbon weave pattern to interior stitching color."
+        title: "Client Specification",
+        description: "This extreme supercar was created specifically to meet discerning clients' requests, with the Modenese atelier working to strengthen uniqueness without sacrificing performance."
       },
       {
-        title: "Delivery Experience",
-        description: "New owners receive factory delivery in Modena, including a tour of the production facility and private track session."
+        title: "Pagani Standards",
+        description: "Despite the track-focused nature, high quality finish and attention to detail comply with the usual demanding Pagani Standards throughout every component."
       }
     ],
     buildHours: "6,000+",
@@ -358,7 +361,7 @@ export const carData = {
   footer: {
     brand: "PAGANI",
     tagline: "The Art of the Hypercar",
-    copyright: "© 2024 Pagani Automobili S.p.A. All rights reserved.",
+    copyright: "@2026 Jeimeen Chaudhari Copyright. All rights reserved.",
     links: [
       { label: "About", href: "#about" },
       { label: "Models", href: "#models" },
@@ -366,10 +369,10 @@ export const carData = {
       { label: "Contact", href: "#contact" },
     ],
     socialLinks: [
-      { label: "Instagram", href: "#" },
-      { label: "YouTube", href: "#" },
-      { label: "Facebook", href: "#" },
-      { label: "Twitter", href: "#" }
+      { label: "Instagram", href: "https://www.instagram.com/paganiautomobili/" },
+      { label: "YouTube", href: "https://www.youtube.com/user/PaganiAutomobili" },
+      { label: "Facebook", href: "https://www.facebook.com/PaganiAutomobili/" },
+      { label: "Twitter", href: "https://twitter.com/OfficialPagani" }
     ],
     contact: {
       email: "info@pagani.com",

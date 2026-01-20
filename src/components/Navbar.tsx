@@ -6,17 +6,19 @@ const Navbar = () => {
   const { scrollY } = useScroll();
   const navItems = [
     { label: "Design", targetId: "aerodynamics" },
+    { label: "Engineering", targetId: "engineering" },
     { label: "Engine", targetId: "powerplant" },
     { label: "Specs", targetId: "specs" },
     { label: "Heritage", targetId: "heritage" },
+    { label: "Creator", targetId: "creator" },
   ];
-  
+
   const navBackground = useTransform(
     scrollY,
     [0, 100],
     ["rgba(0, 0, 0, 0.6)", "rgba(0, 0, 0, 0.8)"]
   );
-  
+
   const navBorder = useTransform(
     scrollY,
     [0, 100],
@@ -60,13 +62,12 @@ const Navbar = () => {
 
   return (
     <motion.nav
-      style={{ 
+      style={{
         backgroundColor: navBackground,
         borderColor: navBorder,
       }}
-      className={`fixed top-0 left-0 right-0 z-50 border-b backdrop-blur-md transition-all duration-300 ${
-        isScrolled ? "shadow-[0_12px_40px_rgba(0,0,0,0.35)]" : ""
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 border-b backdrop-blur-md transition-all duration-300 ${isScrolled ? "shadow-[0_12px_40px_rgba(0,0,0,0.35)]" : ""
+        }`}
     >
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">

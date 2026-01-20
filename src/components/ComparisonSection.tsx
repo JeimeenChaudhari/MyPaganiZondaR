@@ -6,12 +6,12 @@ const ComparisonSection = () => {
     <section id="comparison" className="py-24 md:py-32 px-6 relative overflow-hidden">
       {/* Background Image with Gradient Overlay */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-fixed"
         style={{
           backgroundImage: `
-            linear-gradient(135deg, rgba(0, 0, 0, 0.95) 0%, rgba(10, 10, 10, 0.90) 50%, rgba(0, 0, 0, 0.95) 100%),
+            linear-gradient(135deg, rgba(0, 0, 0, 0.50) 0%, rgba(10, 10, 10, 0.40) 50%, rgba(0, 0, 0, 0.50) 100%),
             linear-gradient(to bottom, transparent 0%, rgba(212, 175, 55, 0.05) 50%, transparent 100%),
-            url('data:image/svg+xml,<svg width="1920" height="1080" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="race" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:%23000;stop-opacity:1"/><stop offset="50%" style="stop-color:%23111;stop-opacity:1"/><stop offset="100%" style="stop-color:%23000;stop-opacity:1"/></linearGradient><pattern id="track" patternUnits="userSpaceOnUse" width="100" height="20"><rect x="0" y="8" width="60" height="4" fill="%23d4af37" opacity="0.1"/></pattern></defs><rect fill="url(%23race)" width="1920" height="1080"/><rect fill="url(%23track)" width="1920" height="1080"/><line x1="0" y1="540" x2="1920" y2="540" stroke="%23d4af37" stroke-width="2" opacity="0.15"/></svg>')
+            url('/comparison-lineup.jpg.png')
           `,
         }}
       />

@@ -6,12 +6,12 @@ const ProductionSection = () => {
     <section id="production" className="py-24 md:py-32 px-6 relative overflow-hidden">
       {/* Background Image with Gradient Overlay */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-fixed"
         style={{
           backgroundImage: `
             linear-gradient(135deg, rgba(15, 15, 15, 0.94) 0%, rgba(25, 20, 18, 0.88) 50%, rgba(15, 15, 15, 0.94) 100%),
             radial-gradient(circle at 50% 30%, rgba(212, 175, 55, 0.12) 0%, transparent 50%),
-            url('data:image/svg+xml,<svg width="1920" height="1080" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="craft" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:%23121212;stop-opacity:1"/><stop offset="50%" style="stop-color:%231f1f1f;stop-opacity:1"/><stop offset="100%" style="stop-color:%23121212;stop-opacity:1"/></linearGradient><pattern id="exclusive" patternUnits="userSpaceOnUse" width="200" height="200"><circle cx="100" cy="100" r="60" stroke="%23d4af37" stroke-width="1" fill="none" opacity="0.06"/><circle cx="100" cy="100" r="80" stroke="%23d4af37" stroke-width="0.5" fill="none" opacity="0.04"/><path d="M100,40 L120,80 L100,120 L80,80 Z" stroke="%23d4af37" stroke-width="0.5" fill="none" opacity="0.05"/></pattern></defs><rect fill="url(%23craft)" width="1920" height="1080"/><rect fill="url(%23exclusive)" width="1920" height="1080"/></svg>')
+            url('/production-factory.jpg.jpeg')
           `,
         }}
       />

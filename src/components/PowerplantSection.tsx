@@ -6,13 +6,13 @@ const PowerplantSection = () => {
     <section id="powerplant" className="py-24 md:py-32 px-6 relative overflow-hidden">
       {/* Background Image with Gradient Overlay */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-fixed"
         style={{
           backgroundImage: `
-            linear-gradient(135deg, rgba(15, 15, 15, 0.95) 0%, rgba(25, 25, 25, 0.88) 50%, rgba(15, 15, 15, 0.95) 100%),
+            linear-gradient(135deg, rgba(15, 15, 15, 0.50) 0%, rgba(25, 25, 25, 0.40) 50%, rgba(15, 15, 15, 0.50) 100%),
             radial-gradient(circle at 30% 50%, rgba(212, 175, 55, 0.12) 0%, transparent 50%),
             radial-gradient(circle at 70% 50%, rgba(212, 175, 55, 0.08) 0%, transparent 50%),
-            url('data:image/svg+xml,<svg width="1920" height="1080" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="engine" patternUnits="userSpaceOnUse" width="100" height="100"><circle cx="50" cy="50" r="2" fill="%23d4af37" opacity="0.3"/><circle cx="25" cy="25" r="1.5" fill="%23d4af37" opacity="0.2"/><circle cx="75" cy="75" r="1.5" fill="%23d4af37" opacity="0.2"/><rect x="48" y="0" width="4" height="100" fill="%23d4af37" opacity="0.05"/><rect x="0" y="48" width="100" height="4" fill="%23d4af37" opacity="0.05"/></pattern><linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:%231a1a1a;stop-opacity:1"/><stop offset="50%" style="stop-color:%23252525;stop-opacity:1"/><stop offset="100%" style="stop-color:%231a1a1a;stop-opacity:1"/></linearGradient></defs><rect fill="url(%23bg)" width="1920" height="1080"/><rect fill="url(%23engine)" width="1920" height="1080"/></svg>')
+            url('/powerplant-exhaust.jpg.jpeg')
           `,
         }}
       />

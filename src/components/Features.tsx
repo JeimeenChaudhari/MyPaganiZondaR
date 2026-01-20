@@ -3,16 +3,24 @@ import { carData } from "@/data/carData";
 
 const Features = () => {
   return (
-    <section id="heritage" className="py-24 md:py-32 px-6 relative overflow-hidden">
+    <section id="heritage" className="py-24 md:py-32 px-6 relative overflow-hidden bg-pagani-black">
       {/* Background Image with Gradient Overlay */}
+      {/* Background Image */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        className="absolute inset-0 bg-center bg-no-repeat opacity-20"
+        style={{
+          backgroundImage: "url('/Feature-section.png')",
+          backgroundSize: 'contain'
+        }}
+      />
+      {/* Gradient Overlay */}
+      <div
+        className="absolute inset-0"
         style={{
           backgroundImage: `
-            linear-gradient(135deg, rgba(18, 18, 18, 0.95) 0%, rgba(28, 28, 28, 0.90) 50%, rgba(18, 18, 18, 0.95) 100%),
-            linear-gradient(to right, rgba(212, 175, 55, 0.06) 0%, transparent 30%, transparent 70%, rgba(212, 175, 55, 0.06) 100%),
-            url('data:image/svg+xml,<svg width="1920" height="1080" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="feat" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:%23141414;stop-opacity:1"/><stop offset="50%" style="stop-color:%231e1e1e;stop-opacity:1"/><stop offset="100%" style="stop-color:%23141414;stop-opacity:1"/></linearGradient><pattern id="showcase" patternUnits="userSpaceOnUse" width="120" height="120"><circle cx="60" cy="60" r="30" stroke="%23d4af37" stroke-width="0.5" fill="none" opacity="0.08"/><line x1="30" y1="60" x2="90" y2="60" stroke="%23d4af37" stroke-width="0.5" opacity="0.06"/><line x1="60" y1="30" x2="60" y2="90" stroke="%23d4af37" stroke-width="0.5" opacity="0.06"/></pattern></defs><rect fill="url(%23feat)" width="1920" height="1080"/><rect fill="url(%23showcase)" width="1920" height="1080"/></svg>')
-          `,
+            linear-gradient(135deg, rgba(18, 18, 18, 0.50) 0%, rgba(28, 28, 28, 0.40) 50%, rgba(18, 18, 18, 0.50) 100%),
+            linear-gradient(to right, rgba(212, 175, 55, 0.06) 0%, transparent 45%, transparent 55%, rgba(212, 175, 55, 0.06) 100%)
+          `
         }}
       />
       <div className="container mx-auto max-w-6xl relative z-10">
@@ -44,7 +52,14 @@ const Features = () => {
             >
               <div className="flex-1 w-full">
                 <div className="relative aspect-video border border-pagani-gold/20 bg-pagani-black overflow-hidden group">
-                  <div className="absolute inset-0 bg-gradient-to-br from-pagani-gold/5 to-transparent" />
+                  {/* Feature Image */}
+                  <div
+                    className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110 opacity-60 group-hover:opacity-80"
+                    style={{ backgroundImage: `url(${feature.image})` }}
+                  />
+
+                  <div className="absolute inset-0 bg-gradient-to-br from-pagani-black/80 via-transparent to-pagani-black/80" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-pagani-gold/10 to-transparent mix-blend-overlay" />
 
                   {/* Decorative corners */}
                   <div className="absolute top-0 left-0 w-8 h-8 border-l-2 border-t-2 border-pagani-gold/50" />

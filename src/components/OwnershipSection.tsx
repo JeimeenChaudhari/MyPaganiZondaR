@@ -9,13 +9,13 @@ const OwnershipSection = () => {
     <section id="ownership" className="py-24 md:py-32 px-6 relative overflow-hidden">
       {/* Background Image with Gradient Overlay */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-fixed"
         style={{
           backgroundImage: `
-            linear-gradient(135deg, rgba(15, 15, 15, 0.96) 0%, rgba(25, 22, 20, 0.92) 50%, rgba(15, 15, 15, 0.96) 100%),
+            linear-gradient(135deg, rgba(15, 15, 15, 0.70) 0%, rgba(25, 22, 20, 0.60) 50%, rgba(15, 15, 15, 0.70) 100%),
             radial-gradient(ellipse at top right, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
             radial-gradient(ellipse at bottom left, rgba(212, 175, 55, 0.08) 0%, transparent 50%),
-            url('data:image/svg+xml,<svg width="1920" height="1080" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="luxury" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:%23101010;stop-opacity:1"/><stop offset="50%" style="stop-color:%231a1a1a;stop-opacity:1"/><stop offset="100%" style="stop-color:%23101010;stop-opacity:1"/></linearGradient><pattern id="premium" patternUnits="userSpaceOnUse" width="150" height="150"><rect x="74" y="0" width="2" height="150" fill="%23d4af37" opacity="0.08"/><rect x="0" y="74" width="150" height="2" fill="%23d4af37" opacity="0.08"/><circle cx="75" cy="75" r="50" stroke="%23d4af37" stroke-width="1" fill="none" opacity="0.05"/></pattern></defs><rect fill="url(%23luxury)" width="1920" height="1080"/><rect fill="url(%23premium)" width="1920" height="1080"/></svg>')
+            url('/ownership-lifestyle.jpg.png')
           `,
         }}
       />

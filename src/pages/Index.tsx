@@ -1,4 +1,4 @@
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import { useScroll, useSpring } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import ZondaScrollCanvas from "@/components/ZondaScrollCanvas";
@@ -14,9 +14,11 @@ import ProductionSection from "@/components/ProductionSection";
 import ComparisonSection from "@/components/ComparisonSection";
 import OwnershipSection from "@/components/OwnershipSection";
 import Footer from "@/components/Footer";
+import AboutCreator from "@/components/AboutCreator";
 
 const Index = () => {
   const containerRef = useRef<HTMLElement>(null);
+  const [isContentReady, setIsContentReady] = useState(false);
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -53,8 +55,9 @@ const Index = () => {
             scrollYProgress={smoothProgress}
             totalFrames={240}
             zipPath="/images/zonda-sequence.zip"
+            onLoadingComplete={() => setIsContentReady(true)}
           />
-          <ZondaExperience scrollYProgress={smoothProgress} />
+          <ZondaExperience scrollYProgress={smoothProgress} isContentReady={isContentReady} />
         </div>
       </section>
 
@@ -70,6 +73,7 @@ const Index = () => {
         <ProductionSection />
         <ComparisonSection />
         <OwnershipSection />
+        <AboutCreator />
         <Footer />
       </div>
     </main>

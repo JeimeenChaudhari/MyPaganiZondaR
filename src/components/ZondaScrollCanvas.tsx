@@ -6,9 +6,10 @@ interface ZondaScrollCanvasProps {
   scrollYProgress: MotionValue<number>;
   totalFrames: number;
   zipPath: string;
+  onLoadingComplete?: () => void;
 }
 
-const ZondaScrollCanvas = ({ scrollYProgress, totalFrames, zipPath }: ZondaScrollCanvasProps) => {
+const ZondaScrollCanvas = ({ scrollYProgress, totalFrames, zipPath, onLoadingComplete }: ZondaScrollCanvasProps) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [images, setImages] = useState<HTMLImageElement[]>([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -122,6 +123,7 @@ const ZondaScrollCanvas = ({ scrollYProgress, totalFrames, zipPath }: ZondaScrol
               }
             }
             setIsLoading(false);
+            onLoadingComplete?.();
           }, 50);
         } else {
           setIsLoading(false);
@@ -257,37 +259,96 @@ const ZondaScrollCanvas = ({ scrollYProgress, totalFrames, zipPath }: ZondaScrol
 
       {isLoading && (
         <div className="absolute inset-0 flex flex-col items-center justify-center z-10 bg-pagani-black">
-          <div className="relative w-20 h-20">
-            <svg className="w-full h-full -rotate-90 animate-pulse" viewBox="0 0 100 100">
-              <circle
-                cx="50"
-                cy="50"
-                r="45"
-                fill="none"
-                stroke="hsl(var(--carbon-gray))"
-                strokeWidth="3"
-              />
-              <circle
-                cx="50"
-                cy="50"
-                r="45"
-                fill="none"
-                stroke="hsl(var(--pagani-gold))"
-                strokeWidth="3"
-                strokeDasharray={`${loadingProgress * 2.83} 283`}
-                strokeLinecap="round"
-                className="transition-all duration-100"
-              />
-            </svg>
-            <div className="absolute inset-0 flex items-center justify-center">
-              <span className="font-orbitron text-lg font-bold text-pagani-gold">
-                {loadingProgress}%
-              </span>
-            </div>
+          {/* Inspirational Quote */}
+          <div className="max-w-3xl mx-auto px-8 mb-16 text-center">
+            <p className="font-rajdhani text-xl md:text-2xl text-pagani-gold/90 leading-relaxed italic">
+              "Flying on the wings of a wind that keeps blowing harder and faster, the Zonda R was designed for the racetrack, and from the racetrack, without limits."
+            </p>
           </div>
-          <p className="mt-4 font-rajdhani text-sm text-muted-foreground">
-            Loading Zonda R Experience...
-          </p>
+
+          {/* 4 Round Exhaust Pipes Loading Animation - 2x2 Grid */}
+          <div className="grid grid-cols-2 gap-8 mb-12">
+            {[0, 1, 2, 3].map((index) => {
+              // Calculate individual pipe progress with staggered animation
+              const pipeProgress = Math.min(100, Math.max(0, (loadingProgress - index * 3) * 1.03));
+              const circumference = 2 * Math.PI * 40; // radius = 40
+              const strokeDashoffset = circumference - (pipeProgress / 100) * circumference;
+
+              return (
+                <div key={index} className="relative flex items-center justify-center">
+                  {/* Round Exhaust Pipe */}
+                  <svg className="w-20 h-20 -rotate-90" viewBox="0 0 100 100" style={{ overflow: 'visible' }}>
+                    {/* Base ring - white/light gray outline */}
+                    <circle
+                      cx="50"
+                      cy="50"
+                      r="40"
+                      fill="none"
+                      stroke="#e5e5e5"
+                      strokeWidth="4"
+                      opacity="0.3"
+                    />
+
+                    {/* Progress ring - fills with white color */}
+                    <circle
+                      cx="50"
+                      cy="50"
+                      r="40"
+                      fill="none"
+                      stroke="url(#whiteGradient)"
+                      strokeWidth="4"
+                      strokeDasharray={circumference}
+                      strokeDashoffset={strokeDashoffset}
+                      strokeLinecap="round"
+                      className="transition-all duration-100 ease-out"
+                      style={{
+                        filter: pipeProgress > 0 ? 'drop-shadow(0 0 10px rgba(255, 255, 255, 0.8))' : 'none',
+                        opacity: pipeProgress > 0 ? 1 : 0
+                      }}
+                    />
+
+                    {/* Inner glow when active */}
+                    {pipeProgress > 0 && (
+                      <circle
+                        cx="50"
+                        cy="50"
+                        r="32"
+                        fill="url(#glowGradient)"
+                        className="animate-pulse"
+                        style={{
+                          animationDuration: '2s'
+                        }}
+                      />
+                    )}
+
+                    {/* Gradients */}
+                    <defs>
+                      <linearGradient id="whiteGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stopColor="#ffffff" />
+                        <stop offset="50%" stopColor="#f5f5f5" />
+                        <stop offset="100%" stopColor="#e5e5e5" />
+                      </linearGradient>
+
+                      <radialGradient id="glowGradient">
+                        <stop offset="0%" stopColor="#ffffff" stopOpacity="0.2" />
+                        <stop offset="100%" stopColor="#ffffff" stopOpacity="0" />
+                      </radialGradient>
+                    </defs>
+                  </svg>
+                </div>
+              );
+            })}
+          </div>
+
+          {/* Loading percentage and text */}
+          <div className="text-center">
+            <div className="font-orbitron text-4xl font-bold text-pagani-gold mb-2 tabular-nums">
+              {loadingProgress}%
+            </div>
+            <p className="font-rajdhani text-sm text-muted-foreground tracking-wider uppercase">
+              Loading Zonda R Experience
+            </p>
+          </div>
         </div>
       )}
       <canvas

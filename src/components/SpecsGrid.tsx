@@ -16,13 +16,13 @@ const SpecsGrid = () => {
     <section id="specs" className="py-24 md:py-32 px-6 relative overflow-hidden">
       {/* Background Image with Gradient Overlay */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-fixed"
         style={{
           backgroundImage: `
-            linear-gradient(135deg, rgba(0, 0, 0, 0.96) 0%, rgba(8, 8, 8, 0.92) 50%, rgba(0, 0, 0, 0.96) 100%),
+            linear-gradient(135deg, rgba(0, 0, 0, 0.50) 0%, rgba(10, 10, 10, 0.40) 50%, rgba(0, 0, 0, 0.50) 100%),
             radial-gradient(circle at 30% 40%, rgba(212, 175, 55, 0.08) 0%, transparent 40%),
             radial-gradient(circle at 70% 60%, rgba(212, 175, 55, 0.06) 0%, transparent 40%),
-            url('data:image/svg+xml,<svg width="1920" height="1080" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="spec" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:%23000;stop-opacity:1"/><stop offset="50%" style="stop-color:%23080808;stop-opacity:1"/><stop offset="100%" style="stop-color:%23000;stop-opacity:1"/></linearGradient><pattern id="data" patternUnits="userSpaceOnUse" width="80" height="80"><circle cx="40" cy="40" r="1" fill="%23d4af37" opacity="0.2"/><path d="M0,40 L80,40 M40,0 L40,80" stroke="%23d4af37" stroke-width="0.5" opacity="0.1"/></pattern></defs><rect fill="url(%23spec)" width="1920" height="1080"/><rect fill="url(%23data)" width="1920" height="1080"/></svg>')
+            url('/racing-action.jpg.png')
           `,
         }}
       />

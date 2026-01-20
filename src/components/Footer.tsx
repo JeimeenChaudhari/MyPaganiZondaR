@@ -1,8 +1,46 @@
 import { motion } from "framer-motion";
 import { carData } from "@/data/carData";
-import { Instagram, Youtube, Facebook, Twitter, Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin, Globe, Instagram, Youtube, Facebook, Twitter } from "lucide-react";
+import { RxInstagramLogo, RxTwitterLogo, RxGithubLogo, RxLinkedinLogo } from "react-icons/rx";
+import { FaFacebook } from "react-icons/fa";
 
-const socialIcons: Record<string, React.ReactNode> = {
+// Data for Creator/User Section (Top)
+const creatorSocials = [
+  {
+    name: "Instagram",
+    icon: RxInstagramLogo,
+    link: "https://www.instagram.com/jeimeen_editzzz/",
+  },
+  {
+    name: "Facebook",
+    icon: FaFacebook,
+    link: "https://facebook.com",
+  },
+  {
+    name: "Twitter",
+    icon: RxTwitterLogo,
+    link: "https://x.com/Jeimeen3031",
+  },
+  {
+    name: "GitHub",
+    icon: RxGithubLogo,
+    link: "https://github.com/JeimeenChaudhari",
+  },
+  {
+    name: "LinkedIn",
+    icon: RxLinkedinLogo,
+    link: "https://www.linkedin.com/in/jeimeen-chaudhari-3a680028b/",
+  },
+];
+
+const creatorContact = {
+  email: "jeimeen3001@gmail.com",
+  phone: "+91 9316101640",
+  website: "https://cj-space-portfolio.vercel.app/",
+};
+
+// Data for Car/Pagani Section (Bottom)
+const paganiIcons: Record<string, React.ReactNode> = {
   Instagram: <Instagram className="w-5 h-5" />,
   YouTube: <Youtube className="w-5 h-5" />,
   Facebook: <Facebook className="w-5 h-5" />,
@@ -11,10 +49,10 @@ const socialIcons: Record<string, React.ReactNode> = {
 
 const Footer = () => {
   return (
-    <footer className="py-16 md:py-24 px-6 border-t border-pagani-gold/10 relative overflow-hidden">
+    <footer className="py-16 md:py-24 px-6 border-t border-pagani-gold/10 relative overflow-hidden text-foreground">
       {/* Background Image with Gradient Overlay */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat pointer-events-none"
         style={{
           backgroundImage: `
             linear-gradient(135deg, rgba(0, 0, 0, 0.97) 0%, rgba(5, 5, 5, 0.94) 50%, rgba(0, 0, 0, 0.97) 100%),
@@ -23,13 +61,77 @@ const Footer = () => {
           `,
         }}
       />
-      <div className="container mx-auto max-w-6xl relative z-10">
+      <div className="container mx-auto max-w-7xl relative z-10">
+
+        {/* =======================
+            SECTION 1: CREATOR (Top)
+           ======================= */}
+        <div className="grid md:grid-cols-2 gap-12 border-b border-pagani-gold/10 pb-12 mb-12">
+          {/* Creator Brand / Socials */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+          >
+            <h3 className="font-orbitron text-2xl font-bold tracking-widest text-pagani-gold mb-2">
+              JEIMEEN CHAUDHARI
+            </h3>
+            <p className="font-rajdhani text-muted-foreground mb-6 max-w-md">
+              Full Stack Developer specializing in immersive web experiences. Connect with me for collaborations.
+            </p>
+            <div className="flex gap-4">
+              {creatorSocials.map((social, index) => (
+                <a
+                  key={index}
+                  href={social.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 border border-pagani-gold/30 flex items-center justify-center text-pagani-gold hover:bg-pagani-gold hover:text-pagani-black transition-all duration-300 rounded-lg group"
+                >
+                  <social.icon className="w-5 h-5 group-hover:scale-110 transition-transform" />
+                </a>
+              ))}
+            </div>
+          </motion.div>
+
+          {/* Creator Contact / Inquiry */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            viewport={{ once: true }}
+            className="flex flex-col md:items-end justify-center space-y-4"
+          >
+            <h4 className="font-orbitron text-sm tracking-[0.2em] uppercase text-foreground mb-2 text-right w-full">
+              Get in Touch
+            </h4>
+            <div className="flex flex-col gap-3 md:items-end w-full">
+              <a href={`mailto:${creatorContact.email}`} className="flex items-center gap-3 group">
+                <span className="font-rajdhani text-muted-foreground group-hover:text-pagani-gold transition-colors">{creatorContact.email}</span>
+                <Mail className="w-4 h-4 text-pagani-gold" />
+              </a>
+              <a href={`tel:${creatorContact.phone}`} className="flex items-center gap-3 group">
+                <span className="font-rajdhani text-muted-foreground group-hover:text-pagani-gold transition-colors">{creatorContact.phone}</span>
+                <Phone className="w-4 h-4 text-pagani-gold" />
+              </a>
+              <a href={creatorContact.website} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 group">
+                <span className="font-rajdhani text-muted-foreground group-hover:text-pagani-gold transition-colors">Interact with My Portfolio</span>
+                <Globe className="w-4 h-4 text-pagani-gold" />
+              </a>
+            </div>
+          </motion.div>
+        </div>
+
+        {/* =======================
+            SECTION 2: CAR / PAGANI (Bottom)
+           ======================= */}
         <div className="grid md:grid-cols-4 gap-12 md:gap-8 mb-16">
           {/* Brand */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
             viewport={{ once: true }}
             className="md:col-span-1"
           >
@@ -44,25 +146,27 @@ const Footer = () => {
             <p className="font-rajdhani text-muted-foreground mb-6">
               {carData.footer.tagline}
             </p>
-            {/* Social Links */}
+            {/* Pagani Social Links */}
             <div className="flex gap-4">
               {carData.footer.socialLinks.map((link, index) => (
                 <a
                   key={index}
                   href={link.href}
-                  className="w-10 h-10 border border-pagani-gold/30 flex items-center justify-center text-pagani-gold hover:bg-pagani-gold hover:text-pagani-black transition-all duration-300"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 border border-pagani-gold/30 flex items-center justify-center text-pagani-gold hover:bg-pagani-gold hover:text-pagani-black transition-all duration-300 rounded-full"
                 >
-                  {socialIcons[link.label]}
+                  {paganiIcons[link.label]}
                 </a>
               ))}
             </div>
           </motion.div>
 
-          {/* Links */}
+          {/* Explore Links */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
             viewport={{ once: true }}
           >
             <h4 className="font-orbitron text-sm tracking-[0.2em] uppercase text-foreground mb-6">
@@ -82,15 +186,15 @@ const Footer = () => {
             </ul>
           </motion.div>
 
-          {/* Contact */}
+          {/* Pagani Contact */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
             viewport={{ once: true }}
           >
             <h4 className="font-orbitron text-sm tracking-[0.2em] uppercase text-foreground mb-6">
-              Contact
+              Headquarters
             </h4>
             <ul className="space-y-4">
               <li className="flex items-center gap-3">
@@ -108,6 +212,8 @@ const Footer = () => {
               <li className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 text-pagani-gold flex-shrink-0 mt-1" />
                 <span className="font-rajdhani text-muted-foreground text-sm">
+                  {/* Address is now correctly typed as string in carData after revert */}
+                  {/* @ts-ignore - Temporary ignore if type definition lag */}
                   {carData.footer.contact.address}
                 </span>
               </li>
@@ -118,36 +224,35 @@ const Footer = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
             viewport={{ once: true }}
           >
             <h4 className="font-orbitron text-sm tracking-[0.2em] uppercase text-foreground mb-6">
-              Inquire
+              Ownership
             </h4>
             <p className="font-rajdhani text-muted-foreground mb-6">
-              Experience the Zonda R. Schedule your private consultation with our team.
+              Experience the legacy. Schedule your private consultation.
             </p>
             <button className="w-full px-8 py-3 border border-pagani-gold font-orbitron text-xs tracking-[0.2em] uppercase text-pagani-gold hover:bg-pagani-gold hover:text-pagani-black transition-all duration-300">
-              Contact Us
+              Inquire Now
             </button>
           </motion.div>
         </div>
 
-        {/* Bottom */}
+        {/* =======================
+            SECTION 3: COPYRIGHT (Bottom)
+           ======================= */}
         <div className="pt-8 border-t border-pagani-gold/10">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="font-rajdhani text-sm text-muted-foreground">
               {carData.footer.copyright}
             </p>
             <div className="flex items-center gap-6">
-              <a href="#" className="font-rajdhani text-sm text-muted-foreground hover:text-pagani-gold transition-colors">
+              <a href="/legal" className="font-rajdhani text-sm text-muted-foreground hover:text-pagani-gold transition-colors">
                 Privacy Policy
               </a>
-              <a href="#" className="font-rajdhani text-sm text-muted-foreground hover:text-pagani-gold transition-colors">
-                Terms of Service
-              </a>
-              <a href="#" className="font-rajdhani text-sm text-muted-foreground hover:text-pagani-gold transition-colors">
-                Cookie Settings
+              <a href="/legal" className="font-rajdhani text-sm text-muted-foreground hover:text-pagani-gold transition-colors">
+                Terms and Conditions
               </a>
             </div>
           </div>

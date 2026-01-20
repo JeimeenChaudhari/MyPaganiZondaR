@@ -7,13 +7,13 @@ const InteriorSection = () => {
     <section id="interior" className="py-24 md:py-32 px-6 relative overflow-hidden">
       {/* Background Image with Gradient Overlay */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-fixed"
         style={{
           backgroundImage: `
-            linear-gradient(135deg, rgba(0, 0, 0, 0.94) 0%, rgba(10, 10, 10, 0.88) 50%, rgba(0, 0, 0, 0.94) 100%),
+            linear-gradient(135deg, rgba(0, 0, 0, 0.70) 0%, rgba(10, 10, 10, 0.60) 50%, rgba(0, 0, 0, 0.70) 100%),
             radial-gradient(ellipse at top left, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
             radial-gradient(ellipse at bottom right, rgba(212, 175, 55, 0.08) 0%, transparent 50%),
-            url('data:image/svg+xml,<svg width="1920" height="1080" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="leather" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:%23050505;stop-opacity:1"/><stop offset="50%" style="stop-color:%23151515;stop-opacity:1"/><stop offset="100%" style="stop-color:%23050505;stop-opacity:1"/></linearGradient><pattern id="stitch" patternUnits="userSpaceOnUse" width="40" height="40"><line x1="0" y1="20" x2="40" y2="20" stroke="%23d4af37" stroke-width="0.5" opacity="0.15" stroke-dasharray="2,8"/></pattern></defs><rect fill="url(%23leather)" width="1920" height="1080"/><rect fill="url(%23stitch)" width="1920" height="1080"/><rect x="0" y="0" width="1920" height="2" fill="%23d4af37" opacity="0.2"/><rect x="0" y="1078" width="1920" height="2" fill="%23d4af37" opacity="0.2"/></svg>')
+            url('/interior-cockpit.jpg')
           `,
         }}
       />

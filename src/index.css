@@ -101,11 +101,17 @@ html {
 
   /* Glassmorphism */
   .glass {
-    @apply bg-black/40 backdrop-blur-md border border-white/10;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
   }
 
   .glass-dark {
-    @apply bg-black/60 backdrop-blur-lg border border-white/5;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
   }
 
   /* HUD Border */

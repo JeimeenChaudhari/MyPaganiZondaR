@@ -1,73 +1,67 @@
-# Welcome to your Lovable project
+# Pagani Zonda R - The Immersive Experience
 
-## Project info
+## 🌟 Executive Summary
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+**Pagani Zonda R - The Immersive Experience** is a high-performance, interactive web application developed to digitally recreate the exclusivity and engineering marvel of the Pagani Zonda R.
 
-## How can I edit this code?
+This project serves as a comprehensive technical demonstration of modern frontend engineering, focusing on maximizing user engagement through "scrollytelling," fluid animations, and a bespoke design system. It bridges the gap between digital art and software engineering, delivering a premium user experience comparable to the brand it represents.
 
-There are several ways of editing your application.
+---
 
-**Use Lovable**
+## 🚀 Engineering & Technical Highlights
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+This application is built with a focus on **performance**, **maintainability**, and **scalability**.
 
-Changes made via Lovable will be committed automatically to this repo.
+*   **Component-Driven Architecture**: The codebase is modularized into discrete, reusable functional components (Hero, History, Engineering), ensuring distinct separation of concerns and easier testing.
+*   **Advanced State Management**: Utilizes React's modern hooks repertoire (useState, useEffect, custom hooks) to manage complex animation states and data flow without unnecessary re-renders.
+*   **Performance Optimization**:
+    *   **Code Splitting**: Dynamic importing of heavy assets and components to reduce initial bundle size.
+    *   **Asset Optimization**: High-resolution imagery and videos are optimized for web delivery to maintain visual fidelity without sacrificing load speeds.
+*   **Type Safety**: The entire project is written in **TypeScript**, enforcing strict typing to prevent runtime errors and improve developer tooling support.
 
-**Use your preferred IDE**
+---
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 🎨 Key Features
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### Visual Experience
+*   **Cinematic Narrative**: A linear, scroll-driven story that guides users through the history, design, and engineering of the vehicle.
+*   **Glassmorphism UI**: Implementation of a modern, translucent aesthetic using advanced CSS backdrop filters to create depth and hierarchy.
+*   **Responsive Design**: A fully fluid layout that adapts the complex grid systems and typography for seamless viewing on mobile, tablet, and desktop interfaces.
 
-Follow these steps:
+### Interaction Design
+*   **Micro-Interactions**: Subtle hover states, focus effects, and transition animations that provide immediate feedback to user inputs.
+*   **Smooth Scrolling**: Custom scroll behavior that unifies the navigation experience across different browser engines.
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+---
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## 💻 Technology Stack
 
-# Step 3: Install the necessary dependencies.
-npm i
+| Domain | Technologies Used | Itility |
+| :--- | :--- | :--- |
+| **Frontend Framework** | **React 18** | Component-based UI Architecture |
+| **Language** | **TypeScript** | Static Typing & System Reliability |
+| **Build System** | **Vite** | Next-Generation Frontend Tooling & HMR |
+| **Styling Engine** | **Tailwind CSS** | Utility-First CSS Framework |
+| **Animation Engine** | **Framer Motion** | Complex Animation Orchestration |
+| **UI Components** | **Lucide React** | Consistent Iconography |
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+---
 
-**Edit a file directly in GitHub**
+## � Project Structure & Modules
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+The application is architected into the following key modules:
 
-**Use GitHub Codespaces**
+1.  **Hero Module**: Handles the initial immersive video entry and brand introduction.
+2.  **History & Heritage**: A timeline-based section detailing the legacy of Horacio Pagani.
+3.  **Engineering Core**: Technical visuals breaking down the Aerodynamics, Chassis, and Powertrain.
+4.  **Specifications Grid**: A data-dense, accessible layout for technical metrics.
+5.  **Ownership Experience**: Lifestyle-focused content with exclusive imagery.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+---
 
-## What technologies are used for this project?
+## 👨‍💻 Author
 
-This project is built with:
+**Jeimeen Chaudhari**
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+*   **Role**: Lead Developer & Designer
+*   **Focus**: Advanced Frontend Engineering, UI/UX Design

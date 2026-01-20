@@ -100,7 +100,7 @@ const ZondaScrollCanvas = ({ scrollYProgress, totalFrames, zipPath, onLoadingCom
                 ctx.scale(dpr, dpr);
 
                 const img = filteredImages[0];
-                const scaleFactor = 0.85;
+                const scaleFactor = 1.0;
                 const imgRatio = img.width / img.height;
                 const canvasRatio = rect.width / rect.height;
 
@@ -166,8 +166,8 @@ const ZondaScrollCanvas = ({ scrollYProgress, totalFrames, zipPath, onLoadingCom
     ctx.fillStyle = '#1a1a1a';
     ctx.fillRect(0, 0, rect.width, rect.height);
 
-    // Object-fit: contain logic with scale factor to make image smaller
-    const scaleFactor = 0.85; // Make image 85% of original size
+    // Object-fit: contain logic with scale factor to make image full size
+    const scaleFactor = 1.0;
     const imgRatio = img.width / img.height;
     const canvasRatio = rect.width / rect.height;
 
@@ -177,12 +177,12 @@ const ZondaScrollCanvas = ({ scrollYProgress, totalFrames, zipPath, onLoadingCom
       drawWidth = rect.width * scaleFactor;
       drawHeight = drawWidth / imgRatio;
       drawX = (rect.width - drawWidth) / 2;
-      drawY = (rect.height - drawHeight) / 2 + (rect.height * 0.05); // Shift down slightly
+      drawY = (rect.height - drawHeight) / 2;
     } else {
       drawHeight = rect.height * scaleFactor;
       drawWidth = drawHeight * imgRatio;
       drawX = (rect.width - drawWidth) / 2;
-      drawY = (rect.height - drawHeight) / 2 + (rect.height * 0.05); // Shift down slightly
+      drawY = (rect.height - drawHeight) / 2;
     }
 
     ctx.drawImage(img, drawX, drawY, drawWidth, drawHeight);
@@ -267,7 +267,7 @@ const ZondaScrollCanvas = ({ scrollYProgress, totalFrames, zipPath, onLoadingCom
           </div>
 
           {/* 4 Round Exhaust Pipes Loading Animation - 2x2 Grid */}
-          <div className="grid grid-cols-2 gap-8 mb-12">
+          <div className="grid grid-cols-2 gap-2 mb-12">
             {[0, 1, 2, 3].map((index) => {
               // Calculate individual pipe progress with staggered animation
               const pipeProgress = Math.min(100, Math.max(0, (loadingProgress - index * 3) * 1.03));

@@ -14,7 +14,7 @@ const Navbar = () => {
     { label: "Features", targetId: "features" },
     { label: "Comparison", targetId: "comparison" },
     { label: "Ownership", targetId: "ownership" },
-    { label: "Contect Me", targetId: "footer" },
+    { label: "Contact Me", targetId: "footer" },
   ];
 
   const navBackground = useTransform(

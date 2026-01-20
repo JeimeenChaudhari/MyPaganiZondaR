@@ -46,6 +46,7 @@ const Index = () => {
 
       {/* Scroll Sequence Section - 600vh for smooth car rotation */}
       <section
+        id="showcase"
         ref={containerRef}
         className="h-[600vh] relative"
         style={{ position: 'relative' }}

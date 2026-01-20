@@ -100,7 +100,7 @@ const ZondaScrollCanvas = ({ scrollYProgress, totalFrames, zipPath, onLoadingCom
                 ctx.scale(dpr, dpr);
 
                 const img = filteredImages[0];
-                const scaleFactor = 1.0;
+                const scaleFactor = 0.90;
                 const imgRatio = img.width / img.height;
                 const canvasRatio = rect.width / rect.height;
 
@@ -167,7 +167,7 @@ const ZondaScrollCanvas = ({ scrollYProgress, totalFrames, zipPath, onLoadingCom
     ctx.fillRect(0, 0, rect.width, rect.height);
 
     // Object-fit: contain logic with scale factor to make image full size
-    const scaleFactor = 1.0;
+    const scaleFactor = 0.95;
     const imgRatio = img.width / img.height;
     const canvasRatio = rect.width / rect.height;
 

@@ -5,12 +5,16 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const { scrollY } = useScroll();
   const navItems = [
-    { label: "Design", targetId: "aerodynamics" },
-    { label: "Engineering", targetId: "engineering" },
-    { label: "Engine", targetId: "powerplant" },
+    { label: "Showcase", targetId: "showcase" },
     { label: "Specs", targetId: "specs" },
-    { label: "Heritage", targetId: "heritage" },
-    { label: "Creator", targetId: "creator" },
+    { label: "Heritage", targetId: "history" },
+    { label: "Engineering", targetId: "engineering" },
+    { label: "Design", targetId: "aerodynamics" },
+    { label: "Engine", targetId: "powerplant" },
+    { label: "Features", targetId: "features" },
+    { label: "Comparison", targetId: "comparison" },
+    { label: "Ownership", targetId: "ownership" },
+    { label: "Contect Me", targetId: "footer" },
   ];
 
   const navBackground = useTransform(
@@ -78,20 +82,11 @@ const Navbar = () => {
             transition={{ duration: 0.6 }}
             className="flex items-center gap-3"
           >
-            <div className="relative">
-              <div className="w-10 h-10 border-2 border-pagani-gold rounded-full flex items-center justify-center">
-                <span className="font-orbitron text-pagani-gold text-sm font-bold">P</span>
-              </div>
-              <div className="absolute -inset-1 border border-pagani-gold/30 rounded-full animate-pulse-glow" />
-            </div>
-            <div className="flex flex-col">
-              <span className="font-orbitron text-lg font-bold tracking-[0.3em] text-foreground">
-                PAGANI
-              </span>
-              <span className="font-rajdhani text-xs tracking-[0.2em] text-pagani-gold uppercase">
-                Zonda R
-              </span>
-            </div>
+            <img
+              src="/Pagani-Logo-Transparent.png"
+              alt="Pagani Automobili"
+              className="h-16 w-auto object-contain filter drop-shadow-[0_0_8px_rgba(255,255,255,0.3)]"
+            />
           </motion.div>
 
           {/* Navigation Links */}
@@ -124,6 +119,7 @@ const Navbar = () => {
             transition={{ duration: 0.6, delay: 0.3 }}
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
+            onClick={() => handleNavClick("footer")}
             className="relative px-6 py-2 font-orbitron text-xs tracking-[0.2em] uppercase overflow-hidden group"
           >
             <span className="relative z-10 text-pagani-gold group-hover:text-pagani-black transition-colors duration-300">

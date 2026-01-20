@@ -3,7 +3,7 @@ import { carData } from "@/data/carData";
 
 const Features = () => {
   return (
-    <section id="heritage" className="py-24 md:py-32 px-6 relative overflow-hidden bg-pagani-black">
+    <section id="features" className="py-24 md:py-32 px-6 relative overflow-hidden bg-pagani-black">
       {/* Background Image with Gradient Overlay */}
       {/* Background Image */}
       <div

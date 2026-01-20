@@ -49,7 +49,7 @@ const paganiIcons: Record<string, React.ReactNode> = {
 
 const Footer = () => {
   return (
-    <footer className="py-16 md:py-24 px-6 border-t border-pagani-gold/10 relative overflow-hidden text-foreground">
+    <footer id="footer" className="py-16 md:py-24 px-6 border-t border-pagani-gold/10 relative overflow-hidden text-foreground">
       {/* Background Image with Gradient Overlay */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat pointer-events-none"
@@ -197,25 +197,36 @@ const Footer = () => {
               Headquarters
             </h4>
             <ul className="space-y-4">
-              <li className="flex items-center gap-3">
-                <Mail className="w-4 h-4 text-pagani-gold" />
-                <span className="font-rajdhani text-muted-foreground">
-                  {carData.footer.contact.email}
-                </span>
+              <li>
+                <a href={`mailto:${carData.footer.contact.email}`} className="flex items-center gap-3 group hover:text-pagani-gold transition-colors">
+                  <Mail className="w-4 h-4 text-pagani-gold" />
+                  <span className="font-rajdhani text-muted-foreground group-hover:text-pagani-gold transition-colors">
+                    {carData.footer.contact.email}
+                  </span>
+                </a>
               </li>
-              <li className="flex items-center gap-3">
-                <Phone className="w-4 h-4 text-pagani-gold" />
-                <span className="font-rajdhani text-muted-foreground">
-                  {carData.footer.contact.phone}
-                </span>
+              <li>
+                <a href={`tel:${carData.footer.contact.phone}`} className="flex items-center gap-3 group hover:text-pagani-gold transition-colors">
+                  <Phone className="w-4 h-4 text-pagani-gold" />
+                  <span className="font-rajdhani text-muted-foreground group-hover:text-pagani-gold transition-colors">
+                    {carData.footer.contact.phone}
+                  </span>
+                </a>
               </li>
-              <li className="flex items-start gap-3">
-                <MapPin className="w-4 h-4 text-pagani-gold flex-shrink-0 mt-1" />
-                <span className="font-rajdhani text-muted-foreground text-sm">
-                  {/* Address is now correctly typed as string in carData after revert */}
-                  {/* @ts-ignore - Temporary ignore if type definition lag */}
-                  {carData.footer.contact.address}
-                </span>
+              <li>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Pagani+Automobili+San+Cesario+sul+Panaro"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-start gap-3 group hover:text-pagani-gold transition-colors"
+                >
+                  <MapPin className="w-4 h-4 text-pagani-gold flex-shrink-0 mt-1" />
+                  <span className="font-rajdhani text-muted-foreground text-sm group-hover:text-pagani-gold transition-colors">
+                    {/* Address is now correctly typed as string in carData after revert */}
+                    {/* @ts-ignore - Temporary ignore if type definition lag */}
+                    {carData.footer.contact.address}
+                  </span>
+                </a>
               </li>
             </ul>
           </motion.div>
